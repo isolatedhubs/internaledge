@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Access Restricted</title>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        var allowedReferrer = "https://isolatedhubs.github.io/isolatededge/";
-        var referrer = document.referrer;
+    <title>Obfuscated Remote Content</title>
+    <style>
+      iframe {
+        width: 100%;
+        height: 100vh;
+        border: none;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var a = "aHR0cHM6Ly";
+        var b = "9pc29sYXRlZH";
+        var c = "Jvc2VzLmdpdGh";
+        var d = "1Yi5pby9CaW5z";
+        var e = "R2F0ZXdheS8=";
         
-        if (referrer.indexOf(allowedReferrer) === -1) {
-          // Redirect to a different page or block access
-          window.location.href = "https://tinyurl.com/2dnmojey";
-        }
-        else {
-          // Redirect to url-2 if referrer does not match the allowed domain
-          window.location.href = "https://tinyurl.com/bjnwp7u"; 
-        }
+        var f = a + b + c + d + e;
+        
+        var g = document.createElement('iframe');
+        
+        var h = atob(f);
+        
+        g.src = h;
+        g.allowFullscreen = true;
+        g.allow = "fullscreen";
+        document.body.appendChild(g);
       });
     </script>
   </head>
-  <body>
-    <h1>Welcome to my restricted page!</h1>
-    <p>You have successfully accessed this page from the allowed referrer.</p>
-  </body>
 </html>
