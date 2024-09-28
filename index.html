@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Access Restricted</title>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var allowedReferrer = "https://isolatedhubs.github.io/isolatededge/";
+        var referrer = document.referrer;
+        
+        if (referrer.indexOf(allowedReferrer) === -1) {
+          // Redirect to a different page or block access
+          window.location.href = "https://tinyurl.com/2dnmojey";
+        }
+        else {
+          // Redirect to url-2 if referrer does not match the allowed domain
+          window.location.href = "https://tinyurl.com/bjnwp7u"; 
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to my restricted page!</h1>
+    <p>You have successfully accessed this page from the allowed referrer.</p>
+  </body>
+</html>
