@@ -22,11 +22,11 @@
   
         
         // Check if the current hostname and referrer contain the word "edge"
-        if (!window.location.href.includes("isolatedhubs")) {
+        if (!window.location.href.includes("isolatedhubsss")) {
           // Display a small error message if condition fails
           var errorMessage = document.createElement('div');
           errorMessage.className = 'error-message';
-          errorMessage.textContent = "I am confused! V1.4 "+window.location.href;
+          errorMessage.textContent = "I am confused! V1.4 "+window.location.href+">>"+document.referrer;
           document.body.appendChild(errorMessage);
           return; 
         }
