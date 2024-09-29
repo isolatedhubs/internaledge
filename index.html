@@ -19,18 +19,14 @@
         
         var f = a + b + c + d + e;
 
-        /*
-        if (!window.location.hostname.includes("tinyurl") && !document.referrer.includes("tinyurl")) {
-          return false; 
-        }
-          */
+  
         
         // Check if the current hostname and referrer contain the word "edge"
-        if (!window.location.href.includes("isolatededge")) {
+        if (!window.location.href.includes("internaledge")) {
           // Display a small error message if condition fails
           var errorMessage = document.createElement('div');
           errorMessage.className = 'error-message';
-          errorMessage.textContent = "I need to know, from where you are coming! V1.2-"+window.location.href;
+          errorMessage.textContent = "I am confused! V1.3";
           document.body.appendChild(errorMessage);
           return; 
         }
