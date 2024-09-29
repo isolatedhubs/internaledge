@@ -19,9 +19,11 @@
         
         var f = a + b + c + d + e;
 
-        if (!window.location.hostname.includes("edge")) {
-				return false; 
-			}
+    
+        if (!window.location.hostname.includes("edge") && !document.referrer.includes("edge")) {
+          return false; 
+        }
+
         
         var g = document.createElement('iframe');
         
