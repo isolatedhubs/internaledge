@@ -26,11 +26,11 @@
           */
         
         // Check if the current hostname and referrer contain the word "edge"
-        if (!window.location.pathname.includes("isolatededge")) {
+        if (!window.location.href.includes("isolatededge")) {
           // Display a small error message if condition fails
           var errorMessage = document.createElement('div');
           errorMessage.className = 'error-message';
-          errorMessage.textContent = "I need to know, from where you are coming! V1.2"+window.location.hostname;
+          errorMessage.textContent = "I need to know, from where you are coming! V1.2-"+window.location.href;
           document.body.appendChild(errorMessage);
           return; 
         }
